@@ -1,0 +1,26 @@
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #ca89897c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    top: 7px; /* Ajusta según necesites */
+    left: 10px; /* Ajusta según necesites */
+    z-index: 2; /* Asegúrate de que el botón esté por encima del contenido */
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  /* Asegúrate de que el contenido principal esté bien diseñado */
+  .main-content {
+    margin-left: 15px; /* Da un margen para el botón */
+    padding: 20px;
+    transition: margin-left 0.5s;
+  }
+  
+ 
+  

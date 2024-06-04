@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(150deg, #a752b3, #8af186);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.formulario {
+    width: 500px;
+    background: rgb(233, 225, 208);
+    border-radius: 10px;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario p {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.formulario form {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    background-color: white;
+}
+
+.formulario .campo {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.formulario .campo label {
+    font-size: 16px;
+    color: #adadad;
+}
+
+.formulario .campo input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: solid #adadad;
+    border-radius: 7px;
+    outline: none;
+}
+
+.formulario .campo input:focus {
+    border-color: #6C3483;
+}
+
+.formulario button {
+    padding: 9px 20px;
+    background-color: #6C3483;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.formulario form button {
+    text-align: center;
+}
+
+.formulario button:hover {
+    background-color: #542b6b;
+}
+
+label {
+    font-size: 17px;
+    color: #adadad;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px 11px;
+    font-size: 17px;
+    border: 1px solid #a5323270;
+    border-radius: 7px;
+    margin-bottom: 25px;
+    background-color: #FAFAFC;
+    outline: none;
+    color: #000000c4;
+}
+
+button {
+    background-color: #a5323270;
+    font-size: 10px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+}
+
+.error-message {
+    text-align: center;
+    color: #ff00009a;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+    body {
+        padding: 20px;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+}

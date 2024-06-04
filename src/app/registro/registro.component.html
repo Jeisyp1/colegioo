@@ -1,0 +1,35 @@
+<div class="container">
+
+
+    <div class="formulario">
+
+        <form [formGroup]="registerForm">
+            <label for="new-name">Nombre</label>
+            <input id="new-name" placeholder="Nombre" type="text" formControlName="newName" required>
+        
+            <label for="new-id">Número de Identificación</label>
+            <input id="new-id" placeholder="Número de Identificación" type="text" formControlName="newId" required>
+        
+            <label for="new-phone">Celular</label>
+            <input id="new-phone" placeholder="Celular" type="text" formControlName="newPhone" required>
+            
+            <label for="new-email">Correo</label>
+            <input id="new-email" placeholder="Correo" type="email" formControlName="newEmail" required>
+            
+            <label for="new-password">Contraseña</label>
+            <input id="new-password"  type="password" formControlName="newPassword" required>
+            
+            <div>
+                <button type="button" (click)="register()">Registrar</button>
+            </div>
+            
+            <div *ngIf="registerErrorMessage" class="error-message">
+                <h3>{{ registerErrorMessage }}</h3>
+            </div>
+            <br>
+        </form>
+    
+    </div>
+    
+
+</div>
