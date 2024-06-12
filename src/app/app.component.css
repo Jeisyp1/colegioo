@@ -21,6 +21,24 @@
     padding: 20px;
     transition: margin-left 0.5s;
   }
-  
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica Neue, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-hexagonal-oscuro-color-degradado_79603-1409.jpg?t=st=1715882781~exp=1715886381~hmac=ab3e480ee9e3fd2632f25683a419b56e55c5470713ef5e02544eba6175255391&w=740');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
  
   

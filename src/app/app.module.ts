@@ -12,7 +12,6 @@ import { environment } from 'src/environments/environment.development';
 import { FormsModule } from '@angular/forms';
 import { PortalComponent } from './portal/portal.component';
 import { RegistroComponent } from './registro/registro.component';
-import { RecogerComponent } from './recoger/recoger.component';
 import { RegistroalumnoComponent } from './registroalumno/registroalumno.component';
 
 @NgModule({
@@ -22,7 +21,6 @@ import { RegistroalumnoComponent } from './registroalumno/registroalumno.compone
     SidebarComponent,
     PortalComponent,
     RegistroComponent,
-    RecogerComponent,
     RegistroalumnoComponent
   ],
   imports: [

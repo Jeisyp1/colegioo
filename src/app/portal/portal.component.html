@@ -2,66 +2,66 @@
     <button (click)="toggleMenuCarril()">Recoger</button>
     <button (click)="toggleRegisterAlumno()">Registrar alumno</button>
     <a routerLink="/login">Salir</a>
-</div>
-
-<br>
-<div *ngIf="showRegisterForm">
-    <div class="r">
-        <form [formGroup]="alumnoForm" (ngSubmit)="guardarAlumno()">
-            <label for="nombre">Nombre del Alumno</label>
-            <input id="nombre" type="text" formControlName="nombre">
+  </div>
+  
+  <br>
+  
+  <div *ngIf="mostrarMenuCarril && !alumnosRecogidos">
+    <label for="carril1">
+      <input type="radio" id="carril1" name="carril" (change)="seleccionarCarril('carril1')"> Carril 1
+    </label>
+    <label for="carril2">
+      <input type="radio" id="carril2" name="carril" (change)="seleccionarCarril('carril2')"> Carril 2
+    </label>
+    <label for="carril3">
+      <input type="radio" id="carril3" name="carril" (change)="seleccionarCarril('carril3')"> Carril 3
+    </label>
+    <button *ngIf="showLlegueButton" (click)="llegue()">Llegué</button>
+  </div>
+  
+  <button *ngIf="showListoButton" (click)="listo()">Listo</button>
+  
+  <br>
+  
+  <div *ngIf="showRegisterForm">
+    <form [formGroup]="alumnoForm" (ngSubmit)="guardarAlumnoLocal()">
+      <label for="nombre">Nombre del Alumno</label>
+      <input id="nombre" type="text" formControlName="nombre">
+      
+      <div>
+        <label>Sección</label>
+        <label>
+          <input type="radio" formControlName="seccion" value="Pre-escolar"> Pre-escolar
+        </label>
+        <label>
+          <input type="radio" formControlName="seccion" value="Primaria"> Primaria
+        </label>
+        <label>
+          <input type="radio" formControlName="seccion" value="Bachillerato"> Bachillerato
+        </label>
+      </div>
     
-            <table>
-                <label>Sección</label>
-                <div>
-                    <label>
-                        <input type="radio" formControlName="seccion" value="Pre-escolar"> Pre-escolar
-                    </label>
-                    <label>
-                        <input type="radio" formControlName="seccion" value="Primaria"> Primaria
-                    </label>
-                    <label>
-                        <input type="radio" formControlName="seccion" value="Bachillerato"> Bachillerato
-                    </label>
-                </div>
-            </table>
+      <button type="submit">Guardar</button>
+    </form>
     
-            <button type="submit">Guardar</button>
-        </form>
-    </div>
-    <br>
-
     <h3>Alumnos Guardados</h3>
     <table>
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Sección</th>
-                <th>Acción</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let alumno of alumnos">
-                <td>{{ alumno.nombre }}</td>
-                <td>{{ alumno.seccion }}</td>
-                <td><button (click)="eliminarAlumno(alumno)">Eliminar</button></td>
-            </tr>
-        </tbody>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Sección</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let alumno of alumnosGuardadosLocalmente">
+          <td>{{ alumno.nombre }}</td>
+          <td>{{ alumno.seccion }}</td>
+          <td><button (click)="eliminarAlumno(alumno)">Eliminar</button></td>
+        </tr>
+      </tbody>
     </table>
-</div>
-
-<div>
-    <div *ngIf="mostrarMenuCarril">
-        <label for="carril1">
-            <input type="radio" id="carril1" name="carril"> Carril 1
-        </label>
-        <label for="carril2">
-            <input type="radio" id="carril2" name="carril"> Carril 2
-        </label>
-        <label for="carril3">
-            <input type="radio" id="carril3" name="carril"> Carril 3
-        </label>
-        <button (click)="llegue()">Llegué</button>
-    </div>
-</div>
-
+    
+  </div>
+  
+  

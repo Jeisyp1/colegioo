@@ -1,1 +1,39 @@
-<p>registroalumno works!</p>
+<div>
+    <h3>Estudiantes que han llegado</h3>
+    <div class="tables-container">
+  
+      <div class="table-wrapper">
+        <h4>Carril 1</h4>
+        <table>
+          <tbody>
+            <tr *ngFor="let alumno of alumnosCarril1">
+              <td [style.background-color]="getColorByNivel(alumno.seccion)">{{ alumno.nombre }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <div class="table-wrapper">
+        <h4>Carril 2</h4>
+        <table>
+          <tbody>
+            <tr *ngFor="let alumno of alumnosCarril2">
+              <td [style.background-color]="getColorByNivel(alumno.seccion)">{{ alumno.nombre }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <div class="table-wrapper">
+        <h4>Carril 3</h4>
+        <table>
+          <tbody>
+            <tr *ngFor="let alumno of alumnosCarril3">
+              <td [style.background-color]="getColorByNivel(alumno.seccion)">{{ alumno.nombre }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
