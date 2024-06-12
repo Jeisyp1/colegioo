@@ -3,7 +3,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CrudService } from '../service/crud.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
-import { PortalComponent } from '../portal/portal.component';
 
 @Component({
   selector: 'app-registroalumno',
